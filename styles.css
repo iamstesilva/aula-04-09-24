@@ -18,60 +18,61 @@ body {
     align-items: center; /* Centraliza o formulário horizontalmente */
 }
 
-/* Estilo das abas */
-.tabs {
-    overflow: hidden;
-    border-bottom: 1px solid #ccc;
-    width: 100%; /* Largura total das abas */
-    max-width: 400px; /* Largura máxima das abas */
-    margin-bottom: 20px; /* Espaçamento abaixo das abas */
-}
-
-.tablink {
-    background-color: #f1f1f1; /* Cor de fundo das abas */
-    border: 1px solid #ccc; /* Borda das abas */
-    border-bottom: none; /* Remove a borda inferior das abas */
-    outline: none; /* Remove o contorno padrão */
-    padding: 10px; /* Espaçamento interno das abas */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    width: 50%; /* Largura das abas */
-    text-align: center; /* Centraliza o texto das abas */
-    font-size: 16px; /* Tamanho da fonte das abas */
-}
-
-.tablink:hover {
-    background-color: #ddd; /* Cor de fundo ao passar o mouse sobre a aba */
-}
-
-.tabcontent {
-    display: none; /* Oculta o conteúdo das abas por padrão */
-    background-color: #ffffff; /* Cor de fundo das abas */
-    padding: 20px; /* Espaçamento interno do conteúdo das abas */
-    border: 1px solid #ccc; /* Borda do conteúdo das abas */
-    border-radius: 4px; /* Bordas arredondadas */
-    width: 100%; /* Largura total do conteúdo das abas */
-    max-width: 400px; /* Largura máxima do conteúdo das abas */
+/* Estilo do formulário */
+form {
+    background: linear-gradient(to right, #ffffff, #e0e0e0); /* Gradiente de fundo */
+    padding: 20px; /* Espaçamento interno do formulário */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do formulário */
+    width: 100%; /* Largura total do formulário */
+    max-width: 400px; /* Largura máxima do formulário */
     box-sizing: border-box; /* Inclui o padding e a borda na largura total */
+    transition: background 0.5s ease; /* Transição suave para a cor de fundo */
+    text-align: center; /* Centraliza o texto dos elementos do formulário */
 }
 
-/* Estilo para o botão de próximo */
-.nextBtn {
+/* Alteração da cor de fundo ao passar o mouse */
+form:hover {
+    background: linear-gradient(to right, #e0e0e0, #ffffff); /* Gradiente reverso */
+}
+
+/* Estilo para cada rótulo */
+label {
+    display: block; /* Faz o rótulo ocupar uma linha inteira */
+    margin-bottom: 5px; /* Espaçamento abaixo do rótulo */
+    font-weight: bold; /* Deixa o texto mais forte */
+    text-align: center; /* Centraliza o texto dos rótulos */
+}
+
+/* Estilo para os campos de entrada */
+input[type="text"], input[type="email"], input[type="password"] {
+    width: calc(100% - 22px); /* Ajusta a largura para acomodar o padding e a borda */
+    padding: 10px; /* Espaçamento interno dos campos */
+    margin-bottom: 15px; /* Espaçamento abaixo dos campos */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 4px; /* Bordas arredondadas */
+    box-sizing: border-box; /* Inclui o padding e a borda na largura total */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilo para o botão de envio */
+input[type="submit"] {
     background-color: #4CAF50; /* Cor de fundo verde */
     color: white; /* Cor do texto branca */
     border: none; /* Remove a borda padrão */
     padding: 10px 20px; /* Espaçamento interno do botão */
+    text-align: center; /*
     text-align: center; /* Alinha o texto ao centro */
     text-decoration: none; /* Remove o sublinhado */
     display: inline-block; /* Faz o botão se comportar como um bloco em linha */
     font-size: 16px; /* Tamanho da fonte do botão */
     border-radius: 4px; /* Bordas arredondadas */
-    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o botão */
+    cursor: url('custom-cursor.png'), auto; /* Aplica o cursor personalizado */
     width: 100%; /* Largura total do botão */
-    margin-top: 10px; /* Espaçamento acima do botão */
     transition: background-color 0.3s ease; /* Transição suave para a cor de fundo do botão */
 }
 
-.nextBtn:hover {
+input[type="submit"]:hover {
     background-color: #45a049; /* Cor de fundo mais escura ao passar o mouse */
 }
 
