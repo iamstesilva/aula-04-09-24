@@ -14,7 +14,8 @@ body {
 .container {
     width: 100%; /* Largura total do container */
     display: flex;
-    justify-content: center; /* Centraliza o formulário horizontalmente */
+    flex-direction: column; /* Adiciona coluna para o conteúdo */
+    align-items: center; /* Centraliza o formulário horizontalmente */
 }
 
 /* Estilo do formulário */
@@ -60,16 +61,34 @@ input[type="submit"] {
     color: white; /* Cor do texto branca */
     border: none; /* Remove a borda padrão */
     padding: 10px 20px; /* Espaçamento interno do botão */
+    text-align: center; /*
     text-align: center; /* Alinha o texto ao centro */
     text-decoration: none; /* Remove o sublinhado */
     display: inline-block; /* Faz o botão se comportar como um bloco em linha */
     font-size: 16px; /* Tamanho da fonte do botão */
     border-radius: 4px; /* Bordas arredondadas */
-    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o botão */
+    cursor: url('custom-cursor.png'), auto; /* Aplica o cursor personalizado */
     width: 100%; /* Largura total do botão */
     transition: background-color 0.3s ease; /* Transição suave para a cor de fundo do botão */
 }
 
 input[type="submit"]:hover {
     background-color: #45a049; /* Cor de fundo mais escura ao passar o mouse */
+}
+
+/* Estilo para a mensagem */
+#message {
+    margin-top: 20px; /* Espaçamento acima da mensagem */
+    padding: 10px; /* Espaçamento interno da mensagem */
+    border: 1px solid #4CAF50; /* Borda verde */
+    border-radius: 4px; /* Bordas arredondadas */
+    background-color: #dff0d8; /* Cor de fundo verde claro */
+    color: #3c763d; /* Cor do texto verde escuro */
+    font-size: 16px; /* Tamanho da fonte da mensagem */
+    display: none; /* Inicialmente oculta */
+}
+
+/* Torna a mensagem visível */
+#message.visible {
+    display: block; /* Exibe a mensagem */
 }
